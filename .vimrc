@@ -24,6 +24,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'vim-syntastic/syntastic'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,4 +59,15 @@ set term=xterm-256color
 noremap ,f :CtrlP<cr>
 noremap ,t :GoAlternate<cr>
 noremap ,n :NERDTreeToggle<cr>
+
+"Golang Syntax
+let g:go_highlight_operators = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_functions = 1
+"Golang Syntastic
+let g:syntastic_go_checkers = ['govet', 'golint', 'errcheck']
+
+
 
