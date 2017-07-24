@@ -26,6 +26,8 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'vim-syntastic/syntastic'
 
+Plugin 'tpope/vim-surround'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,6 +56,7 @@ set laststatus=2
 set noshowmode
 set encoding=utf-8
 set term=xterm-256color
+let g:airline_powerline_fonts = 1
 
 "Keymaps
 noremap ,f :CtrlP<cr>
@@ -68,6 +71,3 @@ let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 "Golang Syntastic
 let g:syntastic_go_checkers = ['govet', 'golint', 'errcheck']
-
-
-
