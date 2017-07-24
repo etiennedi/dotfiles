@@ -28,6 +28,8 @@ Plugin 'vim-syntastic/syntastic'
 
 Plugin 'tpope/vim-surround'
 
+Plugin 'tpope/vim-commentary'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -74,3 +76,7 @@ let g:go_highlight_functions = 1
 
 "Golang Syntastic
 let g:syntastic_go_checkers = ['govet', 'golint', 'errcheck']
+
+"Omni-Completion
+:set completeopt-=preview
+
