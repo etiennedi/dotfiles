@@ -53,6 +53,7 @@ syntax on
 syntax enable
 set background=dark
 colorscheme dracula
+:highlight Normal ctermbg=234 "to make vim easier to separate from the terminal panes in tmux
 
 set number
 set relativenumber
@@ -71,6 +72,7 @@ let g:airline_theme='bubblegum'
 
 "Keymaps
 noremap ,f :CtrlP<cr>
+noremap ,b :CtrlPBuffer<cr>
 noremap ,t :GoAlternate<cr>
 noremap ,n :NERDTreeToggle<cr>
 
