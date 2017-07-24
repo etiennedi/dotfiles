@@ -10,7 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugin 'dracula/vim'
+Plugin 'dracula/vim'
+" Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'fatih/vim-go'
 
@@ -47,6 +48,12 @@ filetype plugin indent on    " required
 filetype plugin indent on
 set noswapfile
 syntax on
+
+" Theme
+syntax enable
+set background=dark
+colorscheme dracula
+
 set number
 set relativenumber
 set tabstop     =2
@@ -60,7 +67,7 @@ set term=xterm-256color
 
 "Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='bubblegum'
 
 "Keymaps
 noremap ,f :CtrlP<cr>
