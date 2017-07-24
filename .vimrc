@@ -10,8 +10,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'dracula/vim'
+" Plugin 'dracula/vim'
 " Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
 
 Plugin 'fatih/vim-go'
 
@@ -51,9 +52,10 @@ syntax on
 
 " Theme
 syntax enable
+colorscheme gruvbox
 set background=dark
-colorscheme dracula
-:highlight Normal ctermbg=234 "to make vim easier to separate from the terminal panes in tmux
+" Disable pipes in vsplits
+:set fillchars+=vert:\ 
 
 set number
 set relativenumber
