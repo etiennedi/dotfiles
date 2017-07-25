@@ -50,12 +50,21 @@ filetype plugin indent on
 set noswapfile
 syntax on
 
-" Theme
+" Theme & Styling
 syntax enable
 colorscheme gruvbox
 set background=dark
 " Disable pipes in vsplits
 :set fillchars+=vert:\ 
+" Style syntastic
+highlight SyntasticErrorSign ctermfg=237 ctermbg=167 
+highlight SyntasticStyleErrorSign ctermfg=237 ctermbg=167 
+highlight SyntasticWarningSign ctermfg=237 ctermbg=214
+highlight SyntasticStyleWarningSign ctermfg=237 ctermbg=214
+let g:syntastic_error_symbol = "\ue0b0"
+let g:syntastic_warning_symbol = "\ue0b0"
+let g:syntastic_style_error_symbol = "\ue0b0"
+let g:syntastic_style_warning_symbol = "\ue0b0"
 
 set number
 set relativenumber
@@ -86,7 +95,7 @@ let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 
 "Golang Syntastic
-let g:syntastic_go_checkers = ['govet', 'golint', 'errcheck']
+let g:syntastic_go_checkers = ['go', 'govet', 'golint', 'errcheck']
 
 "Omni-Completion
 :set completeopt-=preview
