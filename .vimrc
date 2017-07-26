@@ -8,10 +8,11 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+
+Plugin 'tpope/vim-sensible'
+
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugin 'dracula/vim'
-" Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 
 Plugin 'fatih/vim-go'
@@ -25,8 +26,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'scrooloose/nerdtree'
-
-" Plugin 'vim-syntastic/syntastic'
 
 Plugin 'tpope/vim-surround'
 
@@ -76,11 +75,12 @@ let g:neocomplete#enable_at_startup = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
 
-"Keymaps
+"Keymaps / Keybindings
 noremap ,f :CtrlP<cr>
 noremap ,b :CtrlPBuffer<cr>
 noremap ,t :GoAlternate<cr>
 noremap ,n :NERDTreeToggle<cr>
+noremap ,rc :e ~/.vimrc<cr>
 
 "Golang Syntax
 let g:go_highlight_operators = 1
@@ -88,9 +88,6 @@ let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
-
-"Golang Syntastic
-let g:syntastic_go_checkers = ['go', 'govet', 'golint', 'errcheck']
 
 "Omni-Completion
 :set completeopt-=preview
