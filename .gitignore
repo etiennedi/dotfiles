@@ -2,3 +2,4 @@
 !.*conf
 !.*rc
 .npmrc
+!Readme.md
