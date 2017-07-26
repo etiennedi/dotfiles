@@ -26,7 +26,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'scrooloose/nerdtree'
 
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 
 Plugin 'tpope/vim-surround'
 
@@ -34,7 +34,7 @@ Plugin 'tpope/vim-commentary'
 
 Plugin 'jiangmiao/auto-pairs'
 
-Plugin 'Shougo/neocomplete.vim'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,15 +50,13 @@ colorscheme gruvbox
 set background=dark
 " Disable pipes in vsplits
 :set fillchars+=vert:\ 
-" Style syntastic
-highlight SyntasticErrorSign ctermfg=237 ctermbg=167 
-highlight SyntasticStyleErrorSign ctermfg=237 ctermbg=167 
-highlight SyntasticWarningSign ctermfg=237 ctermbg=214
-highlight SyntasticStyleWarningSign ctermfg=237 ctermbg=214
-let g:syntastic_error_symbol = "\ue0b0"
-let g:syntastic_warning_symbol = "\ue0b0"
-let g:syntastic_style_error_symbol = "\ue0b0"
-let g:syntastic_style_warning_symbol = "\ue0b0"
+" Style ALE
+highlight ALEErrorSign ctermfg=237 ctermbg=167 
+highlight ALEWarningSign ctermfg=237 ctermbg=214 
+let g:ale_sign_error = "\ue0b0"
+let g:ale_sign_warning = "\ue0b0"
+let g:ale_sign_column_always = 1
+
 
 set number
 set relativenumber
