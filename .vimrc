@@ -78,6 +78,7 @@ let g:airline_theme='bubblegum'
 "Keymaps / Keybindings
 noremap ,f :CtrlP<cr>
 noremap ,b :CtrlPBuffer<cr>
+noremap ,d :GoDecls<cr>
 noremap ,t :GoAlternate<cr>
 noremap ,n :NERDTreeToggle<cr>
 noremap ,rc :e ~/.vimrc<cr>
@@ -94,6 +95,8 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }
+let g:go_auto_type_info = 1
+let g:go_gocode_unimported_packages = 1
 
 "Omni-Completion
 :set completeopt-=preview
