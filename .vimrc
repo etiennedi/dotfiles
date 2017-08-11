@@ -95,9 +95,11 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 let g:go_gocode_unimported_packages = 1
 
 "Omni-Completion
 :set completeopt-=preview
 
+"Shellcheck Ale Options
+let g:ale_sh_shellcheck_options = '-x'
