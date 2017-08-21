@@ -17,12 +17,12 @@ Plugin 'morhetz/gruvbox'
 
 Plugin 'fatih/vim-go'
 
-Plugin 'Shougo/neocomplete'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'yami-beta/asyncomplete-omni.vim'
 
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'vim-airline/vim-airline'
-
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'scrooloose/nerdtree'
@@ -30,6 +30,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 
 Plugin 'tpope/vim-commentary'
+
+Plugin 'tpope/vim-repeat'
 
 Plugin 'jiangmiao/auto-pairs'
 
@@ -83,6 +85,10 @@ noremap ,t :GoAlternate<cr>
 noremap ,n :NERDTreeToggle<cr>
 noremap ,rc :e ~/.vimrc<cr>
 
+"Asyncomplete Keymaps
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+
 "Golang Syntax
 let g:go_highlight_operators = 1
 let g:go_highlight_methods = 1
@@ -103,3 +109,11 @@ let g:go_gocode_unimported_packages = 1
 
 "Shellcheck Ale Options
 let g:ale_sh_shellcheck_options = '-x'
+
+"Enable OmniCompletion as source for asyncomplete
+call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+\ 'name': 'omni',
+\ 'whitelist': ['*'],
+\ 'completor': function('asyncomplete#sources#omni#completor')
+\  }))
+
