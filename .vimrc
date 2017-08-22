@@ -69,6 +69,7 @@ set laststatus=2
 set noshowmode
 set encoding=utf-8
 set term=xterm-256color
+set splitright
 
 "Enable NeoComplete at startup
 let g:neocomplete#enable_at_startup = 1
