@@ -57,6 +57,7 @@ highlight ALEWarningSign ctermfg=237 ctermbg=214
 let g:ale_sign_error = "\ue0b0"
 let g:ale_sign_warning = "\ue0b0"
 let g:ale_sign_column_always = 1
+set splitright
 
 
 set number
