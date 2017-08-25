@@ -120,3 +120,6 @@ call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
 \ 'completor': function('asyncomplete#sources#omni#completor')
 \  }))
 
+
+" CtrlP ignore folders
+let g:ctrlp_custom_ignore = 'vendor\|node_modules'
