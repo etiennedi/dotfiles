@@ -129,3 +129,10 @@ call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
 
 " CtrlP ignore folders
 let g:ctrlp_custom_ignore = 'vendor\|node_modules'
+
+" Fix missing background issue
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
