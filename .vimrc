@@ -77,8 +77,6 @@ set encoding=utf-8
 set term=xterm-256color
 set splitright
 
-"Enable NeoComplete at startup
-let g:neocomplete#enable_at_startup = 1
 
 "Airline
 let g:airline_powerline_fonts = 1
