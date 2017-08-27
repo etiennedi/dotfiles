@@ -14,6 +14,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'morhetz/gruvbox'
+Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'fatih/vim-go'
 
@@ -51,8 +52,8 @@ set noswapfile
 
 " Theme & Styling
 syntax enable
-colorscheme gruvbox
-set background=dark
+colorscheme solarized
+set background=light
 " Disable pipes in vsplits
 :set fillchars+=vert:\ 
 " Style ALE
@@ -81,7 +82,7 @@ let g:neocomplete#enable_at_startup = 1
 
 "Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='solarized'
 
 "Keymaps / Keybindings
 noremap ,f :CtrlP<cr>
