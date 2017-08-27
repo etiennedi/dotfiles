@@ -57,8 +57,8 @@ set background=light
 " Disable pipes in vsplits
 :set fillchars+=vert:\ 
 " Style ALE
-highlight ALEErrorSign ctermfg=237 ctermbg=167 
-highlight ALEWarningSign ctermfg=237 ctermbg=214 
+highlight ALEErrorSign ctermfg=246 ctermbg=166 
+highlight ALEWarningSign ctermfg=246 ctermbg=214 
 let g:ale_sign_error = "\ue0b0"
 let g:ale_sign_warning = "\ue0b0"
 let g:ale_sign_column_always = 1
