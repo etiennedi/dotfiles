@@ -18,8 +18,11 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'yami-beta/asyncomplete-omni.vim'
+" Plugin 'yami-beta/asyncomplete-omni.vim'
+Plugin 'prabirshrestha/asyncomplete-gocode.vim'
+
 
 Plugin 'kien/ctrlp.vim'
 
@@ -117,12 +120,21 @@ let g:go_addtags_transform = 'camelcase'
 "Shellcheck Ale Options
 let g:ale_sh_shellcheck_options = '-x'
 
-"Enable OmniCompletion as source for asyncomplete
-call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
-\ 'name': 'omni',
-\ 'whitelist': ['*'],
-\ 'completor': function('asyncomplete#sources#omni#completor')
-\  }))
+" "Enable OmniCompletion as source for asyncomplete
+" call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+" \ 'name': 'omni',
+" \ 'whitelist': ['*'],
+" \ 'completor': function('asyncomplete#sources#omni#completor')
+" \  }))
+"
+call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
+    \ 'name': 'gocode',
+    \ 'whitelist': ['go'],
+    \ 'completor': function('asyncomplete#sources#gocode#completor'),
+    \ 'config': {
+    \    'gocode_path': expand('~/go/bin/gocode')
+    \  },
+    \ }))
 
 
 " CtrlP ignore folders
