@@ -33,6 +33,10 @@ Plugin 'tpope/vim-commentary'
 
 Plugin 'tpope/vim-repeat'
 
+Plugin 'tpope/vim-unimpaired'
+
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'w0rp/ale'
