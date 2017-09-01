@@ -18,10 +18,10 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'fatih/vim-go'
 
-Plugin 'prabirshrestha/async.vim'
+" Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/asyncomplete.vim'
-" Plugin 'yami-beta/asyncomplete-omni.vim'
-Plugin 'prabirshrestha/asyncomplete-gocode.vim'
+Plugin 'yami-beta/asyncomplete-omni.vim'
+" Plugin 'prabirshrestha/asyncomplete-gocode.vim'
 
 
 Plugin 'kien/ctrlp.vim'
@@ -44,6 +44,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'w0rp/ale'
+
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -120,21 +124,21 @@ let g:go_addtags_transform = 'camelcase'
 "Shellcheck Ale Options
 let g:ale_sh_shellcheck_options = '-x'
 
-" "Enable OmniCompletion as source for asyncomplete
-" call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
-" \ 'name': 'omni',
-" \ 'whitelist': ['*'],
-" \ 'completor': function('asyncomplete#sources#omni#completor')
-" \  }))
-"
-call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
-    \ 'name': 'gocode',
-    \ 'whitelist': ['go'],
-    \ 'completor': function('asyncomplete#sources#gocode#completor'),
-    \ 'config': {
-    \    'gocode_path': expand('~/go/bin/gocode')
-    \  },
-    \ }))
+"Enable OmniCompletion as source for asyncomplete
+call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+\ 'name': 'omni',
+\ 'whitelist': ['*'],
+\ 'completor': function('asyncomplete#sources#omni#completor')
+\  }))
+
+" call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
+"     \ 'name': 'gocode',
+"     \ 'whitelist': ['go'],
+"     \ 'completor': function('asyncomplete#sources#gocode#completor'),
+"     \ 'config': {
+"     \    'gocode_path': expand('~/go/bin/gocode')
+"     \  },
+"     \ }))
 
 
 " CtrlP ignore folders
@@ -146,3 +150,13 @@ if &term =~ '256color'
     " work properly when Vim is used inside tmux and GNU screen.
     set t_ut=
 endif
+
+"JS
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
+let g:ale_fixers = {
+\   'javascript': [
+\       'eslint',
+\   ],
+\}
+let g:ale_fix_on_save = 1
