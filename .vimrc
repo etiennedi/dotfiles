@@ -95,7 +95,8 @@ noremap ,b :CtrlPBuffer<cr>
 noremap ,d :GoDecls<cr>
 noremap ,t :GoAlternate<cr>
 noremap ,n :NERDTreeToggle<cr>
-noremap ,rc :e ~/.vimrc<cr>
+noremap ,rc :e $MYVIMRC<cr>
+noremap ,src :source $MYVIMRC<cr>
 noremap gat :GoAddTags<cr>
 
 "Asyncomplete Keymaps
