@@ -49,6 +49,8 @@ Plugin 'pangloss/vim-javascript'
 
 Plugin 'mxw/vim-jsx'
 
+Plugin 'flowtype/vim-flow'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -161,3 +163,5 @@ let g:ale_fixers = {
 \   ],
 \}
 let g:ale_fix_on_save = 1
+let g:flow#showquickfix = 0 "This will use ale to the flow checks, but use
+"vim-flow for the autocompletion
