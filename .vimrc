@@ -41,8 +41,6 @@ Plugin 'tpope/vim-unimpaired'
 
 Plugin 'tpope/vim-fugitive'
 
-Plugin 'jiangmiao/auto-pairs'
-
 Plugin 'w0rp/ale'
 
 Plugin 'pangloss/vim-javascript'
@@ -57,7 +55,6 @@ filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
 filetype plugin indent on
-set noswapfile
 
 " Theme & Styling
 syntax enable
@@ -73,7 +70,8 @@ let g:ale_sign_warning = "\ue0b0"
 let g:ale_sign_column_always = 1
 set splitright
 
-
+set noswapfile
+set hidden
 set number
 set relativenumber
 set tabstop     =2
@@ -100,6 +98,10 @@ noremap ,n :NERDTreeToggle<cr>
 noremap ,rc :e $MYVIMRC<cr>
 noremap ,src :source $MYVIMRC<cr>
 noremap gat :GoAddTags<cr>
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 "Asyncomplete Keymaps
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
@@ -111,6 +113,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
+let g:go_highlight_build_constraints = 1
 "Golang Behavior
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
@@ -120,6 +123,7 @@ let g:go_fmt_options = {
 let g:go_auto_type_info = 0
 let g:go_gocode_unimported_packages = 1
 let g:go_addtags_transform = 'camelcase'
+let g:go_build_tags = "unitTests integrationTests journeyTests"
 
 "Omni-Completion
 :set completeopt-=preview
