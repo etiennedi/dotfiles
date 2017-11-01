@@ -169,3 +169,13 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:flow#showquickfix = 0 "This will use ale to the flow checks, but use
 "vim-flow for the autocompletion
+
+"Use locally installed flow
+let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+if matchstr(local_flow, "^\/\\w") == ''
+    let local_flow= getcwd() . "/" . local_flow
+endif
+if executable(local_flow)
+  let g:flow#flowpath = local_flow
+endif
+let g:flow#timeout = 6
