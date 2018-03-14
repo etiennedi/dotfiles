@@ -19,8 +19,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 
 " Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'yami-beta/asyncomplete-omni.vim'
+" Plugin 'prabirshrestha/asyncomplete.vim'
+" Plugin 'yami-beta/asyncomplete-omni.vim'
 " Plugin 'prabirshrestha/asyncomplete-gocode.vim'
 
 
@@ -104,8 +104,8 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 "Asyncomplete Keymaps
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-imap <c-space> <Plug>(asyncomplete_force_refresh)
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+" imap <c-space> <Plug>(asyncomplete_force_refresh)
 
 "Golang Syntax
 let g:go_highlight_operators = 1
@@ -131,12 +131,12 @@ let g:go_build_tags = "unitTests integrationTests journeyTests"
 "Shellcheck Ale Options
 let g:ale_sh_shellcheck_options = '-x'
 
-"Enable OmniCompletion as source for asyncomplete
-call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
-\ 'name': 'omni',
-\ 'whitelist': ['*'],
-\ 'completor': function('asyncomplete#sources#omni#completor')
-\  }))
+" "Enable OmniCompletion as source for asyncomplete
+" call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+" \ 'name': 'omni',
+" \ 'whitelist': ['*'],
+" \ 'completor': function('asyncomplete#sources#omni#completor')
+" \  }))
 
 " call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
 "     \ 'name': 'gocode',
