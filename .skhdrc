@@ -38,3 +38,9 @@ shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
 shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
 shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
 shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+
+# remove borders, so screenshots work again
+# Note the -> in the combination. Without that, the command would
+# not "bubble up" to the OS, so there would be no more screenshot
+# function available with this key combination.
+cmd + shift - 4 -> : chunkc border::clear
