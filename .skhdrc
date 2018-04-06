@@ -5,8 +5,8 @@ alt - f : chunkc tiling::window --toggle fullscreen
 shift + alt - space : chunkc tiling::window --toggle float
 
 # change layout of desktop
-alt - e : chunkc tiling::desktop --layout bsp
-alt - s : chunkc tiling::desktop --layout monocle
+lalt - e : chunkc tiling::desktop --layout bsp
+lalt - s : chunkc tiling::desktop --layout monocle
 
 # kill focused window
 shift + alt - q : chunkc tiling::window --close
