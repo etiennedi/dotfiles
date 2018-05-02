@@ -38,3 +38,10 @@ shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
 shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
 shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
 shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+
+# resize
+cmd + shift - left 	: chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge west
+cmd + shift - down 	: chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge south
+cmd + shift - up 	: chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge north
+cmd + shift - right : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge east
+

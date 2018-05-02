@@ -31,8 +31,8 @@ chunkc set global_desktop_offset_left    15
 chunkc set global_desktop_offset_right   15
 chunkc set global_desktop_offset_gap     15
 
-chunkc set desktop_padding_step_size     60.0
-chunkc set desktop_gap_step_size         60.0
+chunkc set desktop_padding_step_size     30.0
+chunkc set desktop_gap_step_size         30.0
 
 chunkc set bsp_spawn_left                1
 chunkc set bsp_optimal_ratio             1.618
