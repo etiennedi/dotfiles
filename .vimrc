@@ -23,6 +23,7 @@ Plugin 'fatih/vim-go'
 " Plugin 'yami-beta/asyncomplete-omni.vim'
 " Plugin 'prabirshrestha/asyncomplete-gocode.vim'
 
+Plugin 'mileszs/ack.vim'
 
 Plugin 'kien/ctrlp.vim'
 
@@ -179,3 +180,8 @@ if executable(local_flow)
   let g:flow#flowpath = local_flow
 endif
 let g:flow#timeout = 6
+
+" Configure Ack to use ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
