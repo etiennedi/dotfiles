@@ -30,8 +30,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'scrooloose/nerdtree'
-
 Plugin 'tpope/vim-surround'
 
 Plugin 'tpope/vim-commentary'
@@ -50,9 +48,16 @@ Plugin 'mxw/vim-jsx'
 
 Plugin 'flowtype/vim-flow'
 
+Plugin 'rdolgushin/groovy.vim'
+
+Plugin 'prettier/vim-prettier'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set encoding=utf-8
+scriptencoding utf-8
 
 " Put your non-Plugin stuff after this line
 filetype plugin indent on
@@ -185,3 +190,12 @@ let g:flow#timeout = 6
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+set ffs=unix
+set encoding=utf-8
+set fileencoding=utf-8
+set listchars=eol:¶
+
+" Run prettier on save
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
