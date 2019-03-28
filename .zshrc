@@ -137,3 +137,8 @@ alias kru='k rollout undo'
 # Logs
 alias kl='k logs'
 alias klf='k logs -f'
+
+# weaviate
+alias dcd='docker-compose -f docker-compose-dev.yml'
+
+export GO111MODULE=on
