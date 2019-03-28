@@ -18,11 +18,6 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'fatih/vim-go'
 
-" Plugin 'prabirshrestha/async.vim'
-" Plugin 'prabirshrestha/asyncomplete.vim'
-" Plugin 'yami-beta/asyncomplete-omni.vim'
-" Plugin 'prabirshrestha/asyncomplete-gocode.vim'
-
 Plugin 'mileszs/ack.vim'
 
 Plugin 'kien/ctrlp.vim'
@@ -63,6 +58,9 @@ scriptencoding utf-8
 
 " Put your non-Plugin stuff after this line
 filetype plugin indent on
+
+set encoding=utf-8
+scriptencoding utf-8
 
 " Theme & Styling
 syntax enable
@@ -128,10 +126,11 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }
-let g:go_auto_type_info = 0
+let g:go_auto_type_info = 1
 let g:go_gocode_unimported_packages = 1
 let g:go_addtags_transform = 'camelcase'
 let g:go_build_tags = "unitTests integrationTests journeyTests"
+let g:go_fmt_fail_silently = 1
 
 "Omni-Completion
 :set completeopt-=preview
