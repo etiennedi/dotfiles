@@ -131,6 +131,7 @@ let g:go_gocode_unimported_packages = 1
 let g:go_addtags_transform = 'camelcase'
 let g:go_build_tags = "unitTests integrationTests journeyTests"
 let g:go_fmt_fail_silently = 1
+let g:go_def_mode = 'godef'
 
 "Omni-Completion
 :set completeopt-=preview
@@ -198,5 +199,5 @@ set fileencoding=utf-8
 set listchars=eol:¶
 
 " Run prettier on save
-" let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
