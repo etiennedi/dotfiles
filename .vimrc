@@ -20,7 +20,7 @@ Plugin 'fatih/vim-go'
 
 Plugin 'mileszs/ack.vim'
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -96,11 +96,10 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 
 "Keymaps / Keybindings
-noremap ,f :CtrlP<cr>
-noremap ,b :CtrlPBuffer<cr>
+noremap ,f :Files<cr>
+noremap ,b :Buffers<cr>
 noremap ,d :GoDecls<cr>
 noremap ,t :GoAlternate<cr>
-noremap ,n :NERDTreeToggle<cr>
 noremap ,rc :e $MYVIMRC<cr>
 noremap ,src :source $MYVIMRC<cr>
 noremap gat :GoAddTags<cr>
@@ -201,3 +200,7 @@ set listchars=eol:¶
 " Run prettier on save
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
+
+" fzf
+" relies on fzf being installed through homebrew
+set rtp+=/usr/local/opt/fzf
