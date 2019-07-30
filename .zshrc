@@ -142,3 +142,13 @@ alias klf='k logs -f'
 alias dcd='docker-compose -f docker-compose-dev.yml'
 
 export GO111MODULE=on
+
+# added by travis gem
+[ -f /Users/etiennedilocker/.travis/travis.sh ] && source /Users/etiennedilocker/.travis/travis.sh
+
+## gcloud aliases
+alias g='gcloud'
+alias gconfl='gcloud config configurations list'
+alias gconfa='gcloud config configurations activate'
+alias gclusl='gcloud container clusters list'
+alias gclusgc='gcloud container clusters get-credentials'
