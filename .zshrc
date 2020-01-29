@@ -152,3 +152,13 @@ alias gconfl='gcloud config configurations list'
 alias gconfa='gcloud config configurations activate'
 alias gclusl='gcloud container clusters list'
 alias gclusgc='gcloud container clusters get-credentials'
+
+# docker aliases
+alias drm='docker rm -f $(docker ps -q)'
+
+# tmux aliases
+#
+# trs = tmux resize small
+alias trs='tmux resize-pane -y 13'
+# trm = tmux resize medium
+alias trm='tmux resize-pane -y 26'

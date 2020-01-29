@@ -35,6 +35,8 @@ Plugin 'tpope/vim-unimpaired'
 
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'tpope/vim-abolish'
+
 Plugin 'w0rp/ale'
 
 Plugin 'pangloss/vim-javascript'
@@ -48,6 +50,12 @@ Plugin 'rdolgushin/groovy.vim'
 Plugin 'prettier/vim-prettier'
 
 Plugin 'hashivim/vim-terraform'
+
+Plugin 'vim/killersheep'
+
+Plugin 'evanleck/vim-svelte'
+
+Plugin 'takac/vim-hardtime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -128,9 +136,12 @@ let g:go_fmt_options = {
 let g:go_auto_type_info = 1
 let g:go_gocode_unimported_packages = 1
 let g:go_addtags_transform = 'camelcase'
-let g:go_build_tags = "unitTests integrationTests journeyTests"
+let g:go_build_tags = "unitTest integrationTest journeyTest"
 let g:go_fmt_fail_silently = 1
 let g:go_def_mode = 'godef'
+
+"Build tags for ale
+let g:ale_go_golint_options='-tags integrationTest'
 
 "Omni-Completion
 :set completeopt-=preview
@@ -199,8 +210,15 @@ set listchars=eol:¶
 
 " Run prettier on save
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.svelte,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 
 " fzf
 " relies on fzf being installed through homebrew
 set rtp+=/usr/local/opt/fzf
+
+" vim-hardtime
+let g:hardtime_default_on = 1
+let g:hardtime_showmsg = 1
+let g:hardtime_ignore_quickfix = 1
+let g:hardtime_allow_different_key = 1
+
