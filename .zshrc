@@ -60,7 +60,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
   export EDITOR='/usr/local/bin/vim'
@@ -162,3 +162,5 @@ alias drm='docker rm -f $(docker ps -q)'
 alias trs='tmux resize-pane -y 13'
 # trm = tmux resize medium
 alias trm='tmux resize-pane -y 26'
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
