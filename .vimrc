@@ -138,7 +138,7 @@ let g:go_gocode_unimported_packages = 1
 let g:go_addtags_transform = 'camelcase'
 let g:go_build_tags = "unitTest integrationTest journeyTest"
 let g:go_fmt_fail_silently = 1
-let g:go_def_mode = 'godef'
+let g:go_def_mode = 'gopls'
 
 "Build tags for ale
 let g:ale_go_golint_options='-tags integrationTest'
