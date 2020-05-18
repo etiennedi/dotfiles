@@ -139,6 +139,8 @@ let g:go_addtags_transform = 'camelcase'
 let g:go_build_tags = "unitTest integrationTest journeyTest"
 let g:go_fmt_fail_silently = 1
 let g:go_def_mode = 'gopls'
+let g:go_info_mode='gopls'
+
 
 "Build tags for ale
 let g:ale_go_golint_options='-tags integrationTest'
@@ -217,7 +219,7 @@ autocmd BufWritePre *.svelte,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.j
 set rtp+=/usr/local/opt/fzf
 
 " vim-hardtime
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:hardtime_showmsg = 1
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_allow_different_key = 1
