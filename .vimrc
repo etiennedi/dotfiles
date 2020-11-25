@@ -129,7 +129,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_build_constraints = 1
 "Golang Behavior
 let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "gofumports"
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }
@@ -211,7 +211,7 @@ set fileencoding=utf-8
 set listchars=eol:¶
 
 " Run prettier on save
-let g:prettier#autoformat = 0
+let g:prettier#autoformat = 1
 autocmd BufWritePre *.svelte,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 
 " fzf
@@ -223,3 +223,5 @@ let g:hardtime_default_on = 0
 let g:hardtime_showmsg = 1
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_allow_different_key = 1
+
+set colorcolumn=85
