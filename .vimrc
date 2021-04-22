@@ -14,7 +14,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'morhetz/gruvbox'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'fatih/vim-go'
 
@@ -57,6 +57,10 @@ Plugin 'evanleck/vim-svelte'
 
 Plugin 'takac/vim-hardtime'
 
+Plugin 'sonph/onehalf', { 'rtp': 'vim' }
+
+" Plugin 'davidhalter/jedi-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,10 +74,6 @@ filetype plugin indent on
 set encoding=utf-8
 scriptencoding utf-8
 
-" Theme & Styling
-syntax enable
-colorscheme solarized
-set background=light
 " Disable pipes in vsplits
 :set fillchars+=vert:\ 
 " Style ALE
@@ -96,12 +96,14 @@ set laststatus=2
 set noshowmode
 set encoding=utf-8
 set term=xterm-256color
+set background=light
+set background=dark
 set splitright
 
 
 "Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='onehalfdark'
 
 "Keymaps / Keybindings
 noremap ,f :Files<cr>
@@ -121,7 +123,7 @@ nmap <C-l> <C-w>l
 " imap <c-space> <Plug>(asyncomplete_force_refresh)
 
 "Golang Syntax
-let g:go_highlight_operators = 1
+let g:go_highlight_operators = 0
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
@@ -171,12 +173,13 @@ let g:ale_sh_shellcheck_options = '-x'
 " CtrlP ignore folders
 let g:ctrlp_custom_ignore = 'vendor\|node_modules'
 
-" Fix missing background issue
-if &term =~ '256color'
-    " Disable Background Color Erase (BCE) so that color schemes
-    " work properly when Vim is used inside tmux and GNU screen.
-    set t_ut=
-endif
+" " Fix missing background issue
+" if &term =~ '256color'
+"     " Disable Background Color Erase (BCE) so that color schemes
+"     " work properly when Vim is used inside tmux and GNU screen.
+"     set t_ut=
+" endif
+set t_ut=
 
 "JS
 let g:javascript_plugin_flow = 1
@@ -225,3 +228,33 @@ let g:hardtime_ignore_quickfix = 1
 let g:hardtime_allow_different_key = 1
 
 set colorcolumn=85
+
+let g:ale_linters = {
+\   'python': [],
+\}
+
+" true color mode
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+" Theme & Styling
+syntax enable
+colorscheme onehalfdark
+set background=light
+set background=dark
+
+" override go syntax values so they fit the theme better
+hi link goType Conditional
+hi link goStatement Conditional
+hi link goUnsignedInts Conditional
+hi link goSignedInts Conditional
+hi link goFloats Conditional
+hi link goTypeName Function
+hi link goReceiverType Function
+hi link goTypeConstructor Conditional
+hi link goBuiltins Keyword
+hi link goImport Keyword
+hi link goPackage Keyword
