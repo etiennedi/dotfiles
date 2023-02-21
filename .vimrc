@@ -20,6 +20,7 @@ Plugin 'fatih/vim-go'
 
 Plugin 'mileszs/ack.vim'
 
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
 Plugin 'vim-airline/vim-airline'
@@ -47,7 +48,7 @@ Plugin 'flowtype/vim-flow'
 
 Plugin 'rdolgushin/groovy.vim'
 
-Plugin 'prettier/vim-prettier'
+" Plugin 'prettier/vim-prettier'
 
 Plugin 'hashivim/vim-terraform'
 
@@ -58,6 +59,8 @@ Plugin 'evanleck/vim-svelte'
 Plugin 'takac/vim-hardtime'
 
 Plugin 'sonph/onehalf', { 'rtp': 'vim' }
+
+Plugin 'ambv/black'
 
 " Plugin 'davidhalter/jedi-vim'
 
@@ -131,7 +134,8 @@ let g:go_highlight_functions = 1
 let g:go_highlight_build_constraints = 1
 "Golang Behavior
 let g:go_fmt_autosave = 1
-let g:go_fmt_command = "gofumports"
+let g:go_fmt_command="gopls"
+let g:go_gopls_gofumpt=1
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }
@@ -142,6 +146,7 @@ let g:go_build_tags = "unitTest integrationTest journeyTest"
 let g:go_fmt_fail_silently = 1
 let g:go_def_mode = 'gopls'
 let g:go_info_mode='gopls'
+let g:go_list_type = 'quickfix'
 
 
 "Build tags for ale
@@ -214,8 +219,8 @@ set fileencoding=utf-8
 set listchars=eol:¶
 
 " Run prettier on save
-let g:prettier#autoformat = 1
-autocmd BufWritePre *.svelte,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#autoformat = 0
+" autocmd BufWritePre *.svelte,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 
 " fzf
 " relies on fzf being installed through homebrew

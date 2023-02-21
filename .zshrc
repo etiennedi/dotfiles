@@ -54,7 +54,7 @@ export NVM_LAZY_LOAD=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting kubectl docker docker-compose title wd zsh-nvm)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew macos zsh-syntax-highlighting kubectl docker docker-compose title wd zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-  export EDITOR='/usr/local/bin/vim'
+  export EDITOR='/usr/bin/vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -167,3 +167,14 @@ alias trs='tmux resize-pane -y 13'
 alias trm='tmux resize-pane -y 26'
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/etiennedilocker/code/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/etiennedilocker/code/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/etiennedilocker/code/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/etiennedilocker/code/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+export EDITOR=/usr/bin/vim
+ulimit -n 65536
