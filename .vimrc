@@ -62,7 +62,7 @@ Plugin 'sonph/onehalf', { 'rtp': 'vim' }
 
 Plugin 'ambv/black'
 
-" Plugin 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -147,6 +147,8 @@ let g:go_fmt_fail_silently = 1
 let g:go_def_mode = 'gopls'
 let g:go_info_mode='gopls'
 let g:go_list_type = 'quickfix'
+let g:go_rename_command = 'gopls'
+let g:go_gopls_options = ['-debug=localhost:5050']
 
 
 "Build tags for ale
@@ -192,6 +194,7 @@ let g:jsx_ext_required = 0
 let g:ale_fixers = {
 \   'javascript': [
 \       'eslint',
+\       'black',
 \   ],
 \}
 let g:ale_fix_on_save = 1
@@ -263,3 +266,10 @@ hi link goTypeConstructor Conditional
 hi link goBuiltins Keyword
 hi link goImport Keyword
 hi link goPackage Keyword
+
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
+
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
