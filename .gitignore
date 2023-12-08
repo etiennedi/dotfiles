@@ -1,5 +1,7 @@
-*
+/*
 !.*conf
 !.*rc
 .npmrc
 !Readme.md
+!init_scripts
+!init_scripts/*
