@@ -5,3 +5,7 @@
 !Readme.md
 !init_scripts
 !init_scripts/*
+!.config/
+.config/*
+!.config/alacritty/
+!.config/alacritty/*
