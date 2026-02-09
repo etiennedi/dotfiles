@@ -9,3 +9,5 @@
 .config/*
 !.config/alacritty/
 !.config/alacritty/*
+!.config/starship.toml
+!.zsh_plugins.txt
