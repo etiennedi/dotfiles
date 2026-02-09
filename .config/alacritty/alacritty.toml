@@ -7,13 +7,13 @@ option_as_alt = "Both"
 size = 18.0
 
 [font.normal]
-family = "DejaVu Sans Mono for Powerline"
+family = "JetBrainsMono Nerd Font"
 
 [font.bold]
-family = "DejaVu Sans Mono for Powerline"
+family = "JetBrainsMono Nerd Font"
 
 [font.italic]
-family = "DejaVu Sans Mono for Powerline"
+family = "JetBrainsMono Nerd Font"
 
 [shell]
 program = "/bin/zsh"
